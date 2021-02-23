@@ -1,0 +1,28 @@
+Objectif principal de l'ACP : 
+Trouver un système de représentation (nouvelles mesures synthétiques <=> Changement de repère)
+
+Critère à respecter : Garder la distance entre les points
+
+Inertie : Résumer la dynamique d'un nuage de points : Comment se dispersent les points les uns les autres.
+=> Distance ² entre ts les points <=> x(:,i) Transposé Mx(:,i)
+    M : Normalisation 
+    Delta : Matrice de variance/covariance
+    
+Projeter un individu : x(:,i) Transposé par u
+
+L'algorithme de l'ACP concerne la création de nouveaux axes, liés aux anciens axes et après, projection sur ces axes :
+- Comment projeter un point sur un axe ? 
+ Vecteur unitaire (u) : Indiquer la direction de l'axe , il a 3 coords (U(1), U(2) et U(3))
+- Combien de u je vais trouver ? 
+ Ci = <xi, u> = xi(1)* U(1) + xi(2)* U(2) + xi(3)* U(3) : Produit scalaire qui mesure la rassemblance entre xi et u.
+
+il faut trouver U1 (U1(1), U2(1), U3(1)) pour maximiser M.Delta.Mu1
+Pour trouver l'axe, on va avoir recours à la décomposition spectrale d'une matrice (Vecteurs propres, Valeurs propres)
+
+ 
+
+Nuage de points : 
+1ère étape : Centrer les données (calculer la moyenne, Diviser par l'écart type)
+2ème étape : Créer la matrice de variance/covariance (il faut qu'elle soit symétrique)
+3ème étape : Expression de la distance (Normalisation : Un poids affecté à chacune des mesures)
+
