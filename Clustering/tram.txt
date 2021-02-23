@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+import os
+
+def coalescence(x,K,g):
+#......      
+       return clas,g,dtotal
+
+def affiche_classe(x,clas,K):
+    for k in range(0,K):
+        ind=(clas==k)
+        plt.plot(x[0,ind],x[1,ind],"o")
+    plt.show()
+
+# Données de test
+
+#......
+
+K=2
+
+clas,g,critere = coalescence(data,2,ginit)
+affiche_classe(data,clas,2)
+
+#Pb init
+x = np.loadtxt("kmean_d1.txt",dtype=float)
